@@ -4,8 +4,8 @@ library(bit)
 library(crfsuite)
 library(torch)
 
-bpemb <- BPEembed(file_sentencepiece = "C:/Users/Jan/Dropbox/Work/RForgeBNOSAC/VUB/torch.ner/en.wiki.bpe.vs25000.model",
-                  file_word2vec = "C:/Users/Jan/Dropbox/Work/RForgeBNOSAC/VUB/torch.ner/data/en/en.wiki.bpe.vs25000.d25.w2v.bin")
+# bpemb <- BPEembed(file_sentencepiece = "C:/Users/Jan/Dropbox/Work/RForgeBNOSAC/VUB/torch.ner/en.wiki.bpe.vs25000.model",
+#                   file_word2vec = "C:/Users/Jan/Dropbox/Work/RForgeBNOSAC/VUB/torch.ner/data/en/en.wiki.bpe.vs25000.d25.w2v.bin")
 
 downloads <- sentencepiece_download_model("dutch", vocab_size = 25000, dim = 25, model_dir = getwd())
 bpemb <- BPEembed(file_sentencepiece = downloads$file_model,
